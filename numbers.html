@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+
+<!--
+
+In this file, comments are used to identify different parts of the code by letter.
+The Sporclone Instructions file will refer to letters when describing the sequence of
+steps necessary to create a working Sporclone game. Complete the project according
+to the order of the NUMBERED instructions, not the order of the letters.
+
+DO NOT DELETE THE LETTER COMMENTS AFTER YOU COMPLETE STEPS!!!!!
+
+-->
+
+<html>
+<head>
+<!-- DONE a. -->
+<title>Sporclone: Numbers</title>
+
+<!-- b. -->
+<link rel="stylesheet" type="text/css" href="style.css">
+
+<!-- You may optionally style the table in your answers section here. -->
+<style>
+table {
+    width: 100%;
+}
+
+tr {
+
+}
+
+th {
+
+}
+
+td {
+
+}
+
+table span {
+    /* applies only to span tags within table */
+    border: 1px solid #AAAAAA;
+    display: block;
+
+    width: 98%;
+    height: 30px;
+    line-height: 30px;
+    
+    margin: 0 auto;
+    padding: 2px;
+    font-size: 30px;
+    text-align: center;
+
+    color: white;
+}
+
+
+img {
+    margin: 0 auto;
+    padding: 0;
+    max-width: 100px;
+    display: block;
+}
+</style>
+
+<script>
+/*********** Game configuration ***********/
+
+// c.
+var answers = ["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20"];
+
+// d.
+var time_limit = 15; // in seconds
+</script>
+
+
+<!-- e. -->
+<script type="text/javascript" src="sporclone.js"></script>
+
+</head>
+
+
+<!-- f. -->
+<body onload="setup()">
+
+<header>
+    <h1>Sporclone</h1>
+</header>
+
+<div class="frame">
+    
+    <section>
+
+        <aside>
+            <h3>More Games</h3>
+            <ul>
+            <!-- g. -->
+            <li><a href="MLB_AL.html">MLB teams</a></li>
+            <li><a href="FRC_HOF.html">FRC teams</a></li>
+            </ul>
+        </aside>
+        
+        <!-- h. -->
+        <img class="icon" src="number_images/number_icon.png" alt="quiz logo">
+
+        <!-- i. -->
+        <h2>What are the first 20 numbers</h2>
+
+    </section>
+
+    <section>
+        
+        <div class="column">
+            <!-- j. -->
+            <input id="start" onclick="start()" type="button" value="PLAY GAME">
+        </div>
+
+        <div class="column">
+            <!-- k. -->
+            <h3>Enter a number:</h3>
+
+            <!-- l.  -->
+            <input id="guess" type="text" onkeyup="check()">
+        </div>
+
+        <div class="column">
+            <h3>Score</h3>
+            <span id="score"></span>
+        </div>
+        
+        <div class="column">
+            <h3>Time</h3>
+            <span id="time"></span>
+        </div>
+
+    </section> 
+    
+    <section>
+
+        <!-- m. -->
+        <table>
+            <tr>
+                <td>
+                    <span id="answer0">?</span>
+                </td>
+                <td>
+                    <span id="answer1">?</span>
+                </td>
+                <td>
+                    <span id="answer2">?</span>
+                </td>
+                <td>
+                    <span id="answer3">?</span>
+                </td>
+                <td>
+                    <span id="answer4">?</span>
+                </td>
+                <td>
+                    <span id="answer5">?</span>
+                </td>
+                <td>
+                    <span id="answer6">?</span>
+                </td>
+                <td>
+                    <span id="answer7">?</span>
+                </td>
+                <td>
+                    <span id="answer8">?</span>
+                </td>
+                <td>
+                    <span id="answer9">?</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span id="answer10">?</span>
+                </td>
+                <td>
+                    <span id="answer11">?</span>
+                </td>
+                <td>
+                    <span id="answer12">?</span>
+                </td>
+                <td>
+                    <span id="answer13">?</span>
+                </td>
+                <td>
+                    <span id="answer14">?</span>
+                </td>
+                <td>
+                    <span id="answer15">?</span>
+                </td>
+                <td>
+                    <span id="answer16">?</span>
+                </td>
+                <td>
+                    <span id="answer17">?</span>
+                </td>
+                <td>
+                    <span id="answer18">?</span>
+                </td>
+                <td>
+                    <span id="answer19">?</span>
+                </td>
+            </tr>
+        </table>
+
+    </section>
+
+    <footer>
+
+        <!-- n. -->
+        <p>Quiz by Kyle W.</p>
+        
+        <p>Source: <a href="https://en.wikipedia.org/wiki/Number">Wikipedia: Numbers</a></p>
+
+    </footer>
+
+</div>
+
+</body>
+</html>

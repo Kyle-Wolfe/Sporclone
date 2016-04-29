@@ -1,0 +1,132 @@
+/******* Common Styles - Do not edit! *******/
+
+
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #FF8000;
+    box-shadow: 0px 5px 5px #AAAAAA;
+    margin-bottom: 20px;
+    padding: 5px;
+}
+
+div.frame {
+    margin: 0 auto 10px auto;
+    width: 960px;
+}
+
+section {
+    clear: both;
+    border-bottom: 1px solid #AAAAAA;
+    overflow: hidden;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+aside {
+    border-left: 1px solid #AAAAAA;
+    float: right;
+    padding-left: 10px;
+    width: 200px;
+}
+
+div.column {
+    float: left;
+    width: 225px;
+    margin-right: 10px;
+    text-align: center;
+}
+
+footer {
+
+}
+
+h1 {
+    color: #FFFFFF;
+    margin: 0 auto 0 auto;
+    text-align: center;
+    width: 960px;
+}
+
+h2 {
+    margin: 0;
+}
+
+h3 {
+    color: #666666;
+    font-size: 14px;
+    margin: 0 0 5px 0;
+}
+
+p {
+    font-size: 14px;
+}
+
+#time, #score {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+img.icon {
+    border: 1px solid #AAAAAA;
+    float: left;
+    height: 80px;
+    margin-right: 20px;
+    width: 80px;
+}
+
+table {
+    margin: auto;
+}
+
+tr {
+
+}
+
+th {
+
+}
+
+td {
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+
+}
+
+a {
+    color: #009900;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #00BB00;
+    text-decoration: underline;
+}
+
+input[type=button] {
+    background-color: #009900;
+    border: 1px solid #005500;
+    color: #FFFFFF;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+input[type=button]:hover {
+    background-color: #00BB00;
+}
+
+input[type=text] {
+    border: 1px solid #AAAAAA;
+    width: 180px;
+}

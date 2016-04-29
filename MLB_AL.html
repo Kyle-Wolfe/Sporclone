@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+
+<!--
+
+In this file, comments are used to identify different parts of the code by letter.
+The Sporclone Instructions file will refer to letters when describing the sequence of
+steps necessary to create a working Sporclone game. Complete the project according
+to the order of the NUMBERED instructions, not the order of the letters.
+
+DO NOT DELETE THE LETTER COMMENTS AFTER YOU COMPLETE STEPS!!!!!
+
+-->
+
+<html>
+<head>
+<!-- DONE a. -->
+<title>Sporclone: MLB Teams (AL)</title>
+
+<!-- b. -->
+<link rel="stylesheet" type="text/css" href="style.css">
+
+<!-- You may optionally style the table in your answers section here. -->
+<style>
+table {
+    width: 100%;
+}
+
+tr {
+
+}
+
+th {
+
+}
+
+td {
+
+}
+
+table span {
+    /* applies only to span tags within table */
+    border: 1px solid #AAAAAA;
+    display: block;
+
+    width: 98%;
+    height: 30px;
+    line-height: 30px;
+        
+    margin: 0 auto;
+    padding: 1px;
+    text-align: center;
+
+    color: white;
+}
+
+
+img {
+    margin: 0 auto;
+    padding: 0;
+    max-width: 122px;
+    display: block;
+}
+
+.icon{
+    border: none;
+}
+
+</style>
+
+<script>
+/*********** Game configuration ***********/
+
+// c.
+var answers = ["Baltimore","Boston","New York|NYC","Tampa Bay","Toronto",
+               "Chicago", "Cleveland","Detroit","Kansas City","Minneapolis|Minnesota",
+               "Houston","Los Angeles|LA|Anaheim","Oakland","Seattle","Arlington"];
+
+// d.
+var time_limit = 60; // in seconds
+</script>
+
+
+<!-- e. -->
+<script type="text/javascript" src="sporclone.js"></script>
+
+</head>
+
+
+<!-- f. -->
+<body onload="setup()">
+
+<header>
+    <h1>Sporclone</h1>
+</header>
+
+<div class="frame">
+    
+    <section>
+
+        <aside>
+            <h3>More Games</h3>
+            <ul>
+            <!-- g. -->
+            <li><a href="numbers.html">Numbers</a></li>
+            <li><a href="FRC_HOF.html">FRC teams</a></li>
+            </ul>
+        </aside>
+        
+        <!-- h. -->
+        <img class="icon" src="images/AL_logo.jpg" alt="quiz logo">
+
+        <!-- i. -->
+        <h2>Name the city the 15 teams in the Americal League come from</h2>
+
+    </section>
+
+    <section>
+        
+        <div class="column">
+            <!-- j. -->
+            <input id="start" onclick="start()" type="button" value="PLAY GAME">
+        </div>
+
+        <div class="column">
+            <!-- k. -->
+            <h3>Enter the city name:</h3>
+
+            <!-- l.  -->
+            <input id="guess" type="text" onkeyup="check()">
+        </div>
+
+        <div class="column">
+            <h3>Score</h3>
+            <span id="score"></span>
+        </div>
+        
+        <div class="column">
+            <h3>Time</h3>
+            <span id="time"></span>
+        </div>
+
+    </section> 
+    
+    <section>
+
+        <!-- m. -->
+        <table>
+        <tr>
+            <th colspan=5>AL: EAST</tr>
+        </tr>
+        <tr>
+            <td>
+                <img src="images/BAL.gif">
+                <span id="answer0">?</span>
+            </td>
+            <td>
+                <img src="images/BOS.gif">
+                <span id="answer1">?</span>
+            </td>
+            <td>
+                <img src="images/NYY.gif">
+                <span id="answer2">?</span>
+            </td>
+            <td>
+                <img src="images/RAY.gif">
+                <span id="answer3">?</span>
+            </td>
+            <td>
+                <img src="images/TOR.gif">
+                <span id="answer4">?</span>
+            </td>
+        </tr>
+        <tr>
+            <th colspan=5>AL: CENTRAL</tr>
+        </tr>
+        <tr>
+            <td>
+                <img src="images/CWS.gif">
+                <span id="answer5">?</span>
+            </td>
+            <td>
+                <img src="images/IND.gif">
+                <span id="answer6">?</span>
+            </td>
+            <td>
+                <img src="images/DET.gif">
+                <span id="answer7">?</span>
+            </td>
+            <td>
+                <img src="images/KCR.gif">
+                <span id="answer8">?</span>
+            </td>
+            <td>
+                <img src="images/TWN.gif">
+                <span id="answer9">?</span>
+            </td>
+        </tr>
+        <tr>
+            <th colspan=5>AL: WEST</tr>
+        </tr>
+        <tr>
+            <td>
+                <img src="images/HOU.gif">
+                <span id="answer10">?</span>
+            </td>
+            <td>
+                <img src="images/LAA.gif">
+                <span id="answer11">?</span>
+            </td>
+            <td>
+                <img src="images/OAK.gif">
+                <span id="answer12">?</span>
+            </td>
+            <td>
+                <img src="images/SEA.gif">
+                <span id="answer13">?</span>
+            </td>
+            <td>
+                <img src="images/TEX.gif">
+                <span id="answer14">?</span>
+            </td>
+        </tr>
+        </table>
+
+    </section>
+
+    <footer>
+
+        <!-- n. -->
+        <p>Quiz by Kyle W.</p>
+        
+        <p>Source: <a href="https://en.wikipedia.org/wiki/American_League">Wikipedia: MLB American League</a></p>
+
+    </footer>
+
+</div>
+
+</body>
+</html>

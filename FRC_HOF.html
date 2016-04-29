@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+
+<!--
+
+In this file, comments are used to identify different parts of the code by letter.
+The Sporclone Instructions file will refer to letters when describing the sequence of
+steps necessary to create a working Sporclone game. Complete the project according
+to the order of the NUMBERED instructions, not the order of the letters.
+
+DO NOT DELETE THE LETTER COMMENTS AFTER YOU COMPLETE STEPS!!!!!
+
+-->
+
+<html>
+<head>
+<!-- DONE a. -->
+<title>Sporclone: FRC HOF</title>
+
+<!-- b. -->
+<link rel="stylesheet" type="text/css" href="style.css">
+
+<!-- You may optionally style the table in your answers section here. -->
+<style>
+table {
+    width: 100%;
+}
+
+tr {
+}
+
+th {
+
+}
+
+td {
+    width: 25%;
+}
+
+table span {
+    /* applies only to span tags within table */
+    border: 1px solid #AAAAAA;
+    display: block;
+
+    width: 98%;
+    height: 30px;
+    line-height: 30px;
+    
+    margin: 0 auto;
+    padding: 2px;
+    text-align: center;
+
+    color: white;
+}
+
+
+img {
+    margin: 0 auto;
+    padding: 0;
+    max-width: 100px;
+    display: block;
+}
+</style>
+
+<script>
+/*********** Game configuration ***********/
+
+// c.
+var answers = ["Team 597, The Wolveries|597|Wolverines","Team 27, Team RUSH|27|Team RUSH|RUSH","Team 1538, The Holy Cows|1538|Holy Cows","Team 1114, Simbotics|1114|Simbotics",
+               "Team 359, Hawaiian Kids|359|Hawaiian Kids","Team 341, Miss Daisy|341|Miss Daisy","Team 236, Techno Ticks|236|Techno Ticks","Team 842, Falcon Robotics|842|Falcon Robotics",
+               "Team 365, Miracle Workerz|365|Miracle Workerz","Team 111, Wildstang|111|WildStang","Team 67, The HOT Team|67|The HOT Team","Team 254, The Cheesy Poofs|254|Cheesy Poofs",
+               "Team 103, Cybersonics|103|Cybersonics","Team 175, BUZZ Robotics|175|BUZZ","Team 22, Double Deuce|22|Double Deuce","Team 16, Bomb Squad|16|Bomb Squad",
+               "Team 120, Cleveland's Team|120|Cleveland's Team","Team 23, PNTA|23|PNTA","Team 47, Chief Delphi|47|Chief Delphi","Team 144, Operation Orange|144|Operation Orange",
+               "Team 151, The Purple Twister|151|Purple Twister","Team 191, The X-Cats|191|X-Cats","Team 7, The Labsters|7|The Labsters","Team 191, The X-Cats|191|X-Cats"];
+
+// d.
+var time_limit = 120; // in seconds
+</script>
+
+
+<!-- e. -->
+<script type="text/javascript" src="sporclone.js"></script>
+
+</head>
+
+
+<!-- f. -->
+<body onload="setup()">
+
+<header>
+    <h1>Sporclone</h1>
+</header>
+
+<div class="frame">
+    
+    <section>
+
+        <aside>
+            <h3>More Games</h3>
+            <ul>
+            <!-- g. -->
+            <li><a href="MLB_AL.html">MLB Teams</a></li>
+            <li><a href="numbers.html">Numbers</a></li>
+            </ul>
+        </aside>
+        
+        <!-- h. -->
+        <img class="icon" src="FRC_HOF_images/FIRST_logo.png" alt="quiz logo">
+
+        <!-- i. -->
+        <h2>Name the teams in the FRC Hall of Fame</h2>
+
+    </section>
+
+    <section>
+        
+        <div class="column">
+            <!-- j. -->
+            <input id="start" onclick="start()" type="button" value="PLAY GAME">
+        </div>
+
+        <div class="column">
+            <!-- k. -->
+            <h3>Enter a team name or number:</h3>
+
+            <!-- l.  -->
+            <input id="guess" type="text" onkeyup="check()">
+        </div>
+
+        <div class="column">
+            <h3>Score</h3>
+            <span id="score"></span>
+        </div>
+        
+        <div class="column">
+            <h3>Time</h3>
+            <span id="time"></span>
+        </div>
+
+    </section> 
+    
+    <section>
+
+        <!-- m. -->
+        <table>
+            <td>
+                <table>
+                <tr>
+                    <td>
+                        <span id="answer0">?</span>
+                    </td>
+                    <td>
+                        <span id="answer1">?</span>
+                    </td>
+                    <td>
+                        <span id="answer2">?</span>
+                    </td>
+                    <td>
+                        <span id="answer3">?</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span id="answer4">?</span>
+                    </td>
+                    <td>
+                        <span id="answer5">?</span>
+                    </td>
+                    <td>
+                        <span id="answer6">?</span>
+                    </td>
+                    <td>
+                        <span id="answer7">?</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span id="answer8">?</span>
+                    </td>
+                    <td>
+                        <span id="answer9">?</span>
+                    </td>
+                    <td>
+                        <span id="answer10">?</span>
+                    </td>
+                    <td>
+                        <span id="answer11">?</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span id="answer12">?</span>
+                    </td>
+                    <td>
+                        <span id="answer13">?</span>
+                    </td>
+                    <td>
+                        <span id="answer14">?</span>
+                    </td>
+                    <td>
+                        <span id="answer15">?</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span id="answer16">?</span>
+                    </td>
+                    <td>
+                        <span id="answer17">?</span>
+                    </td>
+                    <td>
+                        <span id="answer18">?</span>
+                    </td>
+                    <td>
+                        <span id="answer19">?</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span id="answer20">?</span>
+                    </td>
+                    <td>
+                        <span id="answer21">?</span>
+                    </td>
+                    <td>
+                        <span id="answer22">?</span>
+                    </td>
+                    <td>
+                        <span id="answer23">?</span>
+                    </td>
+                </tr>
+                </table>
+            </td>
+        </table>
+
+    </section>
+
+    <footer>
+
+        <!-- n. -->
+        <p>Quiz by Kyle W</p>
+        
+        <p>Source: <a href="http://archive.firstinspires.org/aboutus/first-history">FIRST website</a></p>
+
+    </footer>
+
+</div>
+
+</body>
+</html>
